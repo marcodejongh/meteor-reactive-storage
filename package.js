@@ -35,7 +35,7 @@ Package.onTest(function(api) {
     'practicalmeteor:sinon',
     'practicalmeteor:chai',
     'underscore',
-    'mdj:localstorage',
+    'mdj:reactive-storage',
     'tracker'
   ]);
 
