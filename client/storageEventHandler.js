@@ -34,7 +34,7 @@ onStorageEvent = function onStorageEvent(storageEvent) {
   }
 };
 
-if (!mocha) {
+if (_.isUndefined(window.mocha)) {
   //When testing this event should not be attached because it will break the tests if more than 1 tab is open
   window.addEventListener('storage', onStorageEvent, false);
 }
