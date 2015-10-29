@@ -1,7 +1,7 @@
 meteor-reactive-storage
 ================================
 
-Adds reactive wrappers around localstorage & sessionstorage to your application
+Adds reactive wrappers around ```localStorage``` & ```sessionStorage``` to your application.
 
 #Installation
 
@@ -12,7 +12,9 @@ meteor add mdj:reactive-storage
 #Usage
 
 The package adds ```reactiveLocalStorage``` and ```reactiveSessionStorage``` to the global scope of your application.
-It wraps around the API of the normal localstorage adding reactivity. Use is the same as the normal ```localStorage``` or ```sessionStorage```
+It wraps around the API of the normal localstorage adding reactivity. Use is the same as the normal ```localStorage``` or ```sessionStorage```. 
+
+Adds listener to the [storage event](https://developer.mozilla.org/en-US/docs/Web/Events/storage) to catch changes to storage made in other tabs.
 
 ```js
 reactiveLocalStorage.setItem('someValue', '1');
