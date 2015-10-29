@@ -1,5 +1,5 @@
 function getRandomItem() {
-  return Math.floor(Math.random()*90000) + 10000;
+  return Math.floor(Math.random() * 90000) + 10000;
 }
 
 describe('ReactiveLocalStorage', function() {
@@ -65,7 +65,7 @@ describe('ReactiveLocalStorage', function() {
       });
 
       it('Should decrease the lenght property', function() {
-        let newLen = storage.length -1;
+        let newLen = storage.length - 1;
         instance.removeItem(testItem);
         expect(instance.length).to.equal(newLen);
       });

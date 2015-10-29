@@ -41,7 +41,7 @@ When passed a number n, this method will return the name of the nth key in the s
 
 ### Params:
 
-* **Number** *number* integer representing the number of the key you want to get the name of. This is a zero-based index.
+* **Number** *number* integer representing the number of the key you want to get the name of.                        This is a zero-based index.
 
 ### Return:
 
@@ -62,7 +62,8 @@ Registers a dependency on the key.
 
 ## setItem(keyName, keyValue)
 
-When passed a key name and keyValue, will add that key to the storage, or update that key's keyValue if it already exists.
+When passed a key name and keyValue, will add that key to the storage,
+or update that key's keyValue if it already exists.
 Triggers dependency changed on all dependents of the key
 
 ### Params:

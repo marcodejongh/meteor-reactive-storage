@@ -1,4 +1,4 @@
-/*global ReactiveStorageWrapper:true*/
+/*global ReactiveStorageWrapper:true, reactiveSessionStorage: true, reactiveLocalStorage:true*/
 
 ReactiveStorageWrapper = class ReactiveStorageWrapper {
   constructor(storage) {
@@ -40,7 +40,8 @@ ReactiveStorageWrapper = class ReactiveStorageWrapper {
   /**
    * When passed a number n, this method will return the name of the nth key in the storage.
    *
-   * @param {Number} number integer representing the number of the key you want to get the name of. This is a zero-based index.
+   * @param {Number} number integer representing the number of the key you want to get the name of.
+   *                        This is a zero-based index.
    * @returns {String} the name of the key.
    */
   key(number) {
@@ -60,7 +61,8 @@ ReactiveStorageWrapper = class ReactiveStorageWrapper {
   }
 
   /**
-   * When passed a key name and keyValue, will add that key to the storage, or update that key's keyValue if it already exists.
+   * When passed a key name and keyValue, will add that key to the storage,
+   * or update that key's keyValue if it already exists.
    * Triggers dependency changed on all dependents of the key
    *
    * @param {String} keyName the name of the key you want to create/update.

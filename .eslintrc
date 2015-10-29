@@ -8,7 +8,8 @@
   },
   "globals": {
     "ReactiveStorageWrapper": false,
-    "reactiveLocalStorage": false
+    "reactiveLocalStorage": false,
+    "reactiveSessionStorage": false
   },
   "rules": {
     "block-scoped-var": 2,
