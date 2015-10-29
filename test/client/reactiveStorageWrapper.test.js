@@ -117,9 +117,9 @@ describe('ReactiveLocalStorage', function() {
               });
 
               Meteor.setTimeout(() => instance.setItem(testItem, '1'), 100);
-              Meteor.setTimeout(() => instance.setItem(testItem, '2'), 300);
-              Meteor.setTimeout(() => instance.setItem(testItem, '3'), 500);
-              Meteor.setTimeout(() => instance.setItem(testItem, '4'), 700);
+              Meteor.setTimeout(() => instance.setItem(testItem, '2'), 150);
+              Meteor.setTimeout(() => instance.setItem(testItem, '3'), 200);
+              Meteor.setTimeout(() => instance.setItem(testItem, '4'), 250);
 
               Meteor.setTimeout(function() {
                 try {
@@ -128,7 +128,7 @@ describe('ReactiveLocalStorage', function() {
                 } catch (e) {
                   done(e);
                 }
-              }, 1000);
+              }, 400);
             });
           });
         });
@@ -207,7 +207,7 @@ describe('ReactiveLocalStorage', function() {
               instance.setItem('testValue2', '2');
               instance.setItem('testValue3', '3');
 
-              window.dispatchEvent(new StorageEvent('storage', {
+              onStorageEvent(new StorageEvent('storage', {
                 key: null,
                 newValue: null,
                 oldValue: null,
@@ -232,7 +232,7 @@ describe('ReactiveLocalStorage', function() {
 
               instance.setItem(testKey, '1');
 
-              window.dispatchEvent(new StorageEvent('storage', {
+              onStorageEvent(new StorageEvent('storage', {
                 key: testKey,
                 newValue: testValue,
                 storageArea: instance._storage
@@ -255,7 +255,7 @@ describe('ReactiveLocalStorage', function() {
 
               instance.setItem(testKey, '1');
 
-              window.dispatchEvent(new StorageEvent('storage', {
+              onStorageEvent(new StorageEvent('storage', {
                 key: testKey,
                 newValue: null,
                 storageArea: instance._storage

@@ -1,4 +1,4 @@
-/* global onStorageEvent:true*/
+/* global onStorageEvent:true, mocha:false*/
 onStorageEvent = function onStorageEvent(storageEvent) {
   let storage;
 
@@ -34,4 +34,8 @@ onStorageEvent = function onStorageEvent(storageEvent) {
   }
 };
 
-window.addEventListener('storage', onStorageEvent, false);
+if (!mocha) {
+  //When testing this event should not be attached because it will break the tests if more than 1 tab is open
+  window.addEventListener('storage', onStorageEvent, false);
+}
+
