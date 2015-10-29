@@ -1,20 +1,8 @@
-meteor-reactive-storage
-================================
 
-Adds reactivity to localstorage & sessionstorage
 
-#Installation
+<!-- Start client/reactiveStorageWrapper.js -->
 
-```
-meteor add mdj:reactive-storage
-```
-
-#Usage
-
-The package adds ```reactiveLocalStorage``` and ```reactiveSessionStorage``` to the global scope of your application.
-It wraps around the API of the normal localstorage adding reactivity. 
-
-#API
+global ReactiveStorageWrapper:true
 
 ## key(number)
 
@@ -64,3 +52,6 @@ Triggers dependency changed on all dependents of the key
 
 When invoked, will empty all keys out of the storage.
 Triggers dependency changed on all dependents of keys
+
+<!-- End client/reactiveStorageWrapper.js -->
+

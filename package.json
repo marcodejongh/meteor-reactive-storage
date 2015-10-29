@@ -1,0 +1,15 @@
+{
+  "name": "reactive-localStorageDevDeps",
+  "description": "Development dependencies for meteor reactive-localstorage",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^1.7.2",
+    "eslint-plugin-chai": "0.0.1",
+    "eslint-plugin-meteor": "^1.2.0",
+    "eslint-plugin-mocha": "^1.0.0",
+    "jscs": "^2.3.5",
+    "markdox": "0.1.10"
+  }
+}

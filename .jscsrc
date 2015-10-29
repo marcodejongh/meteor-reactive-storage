@@ -97,7 +97,7 @@
   //"requireSpaceBeforeKeywords": true,                 // Requires space before keyword.
   "requireSpaceBeforeObjectValues": true,
   // Requires space after object keys.
-  "requireSpaceBeforePostfixUnaryOperators": true,    // Disallows sticking unary operators to the left.
+  "requireSpaceBeforePostfixUnaryOperators": false,    // Disallows sticking unary operators to the left.
   "requireSpaceBetweenArguments": true,  // Ensure there are spaces after argument separators in call expressions.
   //"requireSpacesInAnonymousFunctionExpression": {     // Requires space before () or {} in anonymous function expressions.
   //  "beforeOpeningRoundBrace": true,

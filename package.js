@@ -12,8 +12,17 @@ Package.onUse(function(api) {
     'ecmascript',
     'underscore',
     'templating',
-    'jquery'
+    'jquery',
+    'tracker'
   ]);
+
+  api.addFiles([
+    'client/reactiveStorageWrapper.js'
+  ], 'client');
+
+  api.export(['reactiveLocalStorage', 'reactiveSessionStorage']);
+  api.export('ReactiveStorageWrapper', {testOnly:true});
+
 });
 
 Package.onTest(function(api) {
@@ -22,6 +31,12 @@ Package.onTest(function(api) {
     'mike:mocha-package@0.5.8',
     'practicalmeteor:sinon',
     'practicalmeteor:chai',
-    'underscore'
+    'underscore',
+    'mdj:localstorage',
+    'tracker'
   ]);
+
+  api.addFiles([
+    'test/client/reactiveStorageWrapper.test.js'
+  ], 'client');
 });
