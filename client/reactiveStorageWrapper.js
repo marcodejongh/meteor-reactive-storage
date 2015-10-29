@@ -40,8 +40,8 @@ ReactiveStorageWrapper = class ReactiveStorageWrapper {
   /**
    * When passed a number n, this method will return the name of the nth key in the storage.
    *
-   * @param {Number} number
-   * @returns {String}
+   * @param {Number} number integer representing the number of the key you want to get the name of. This is a zero-based index.
+   * @returns {String} the name of the key.
    */
   key(number) {
     return this._storage.key(number);

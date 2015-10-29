@@ -41,11 +41,11 @@ When passed a number n, this method will return the name of the nth key in the s
 
 ### Params:
 
-* **Number** *number* 
+* **Number** *number* integer representing the number of the key you want to get the name of. This is a zero-based index.
 
 ### Return:
 
-* **String** 
+* **String** the name of the key.
 
 ## getItem(keyName)
 
