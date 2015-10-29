@@ -25,7 +25,7 @@ Template.someTemplate.helpers({
 
 //Clicking someButton will cause the getStuffFromStorage helper to rerun
 Template.someTemplate.events({
-  'click someButton': function () { 
+  'click #someButton': function () { 
     var someValue = Number(reactiveLocalStorage.getItem('someValue'));
     reactiveLocalStorage.setItem('someValue', someValue++);
   }
