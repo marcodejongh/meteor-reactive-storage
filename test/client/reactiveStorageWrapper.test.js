@@ -199,6 +199,79 @@ describe('ReactiveLocalStorage', function() {
             }, 500);
           });
         });
+
+        describe('StorageEvent handling', function() {
+          describe('When key is null & newValue is null & oldValue is null', function() {
+            it('Should call clear on the storage', function(done) {
+              instance.setItem('testValue1', '1');
+              instance.setItem('testValue2', '2');
+              instance.setItem('testValue3', '3');
+
+              window.dispatchEvent(new StorageEvent('storage', {
+                key: null,
+                newValue: null,
+                oldValue: null,
+                storageArea: instance._storage
+              }));
+
+              Meteor.defer(function() {
+                try {
+                  expect(instance.length).to.equal(0);
+                  done();
+                } catch (e) {
+                  done(e);
+                }
+              });
+            });
+          });
+
+          describe('When key is a string & newValue is a string', function() {
+            it('Should call setItem on the storage', function(done) {
+              let testKey = 'testValue';
+              let testValue = '1234567';
+
+              instance.setItem(testKey, '1');
+
+              window.dispatchEvent(new StorageEvent('storage', {
+                key: testKey,
+                newValue: testValue,
+                storageArea: instance._storage
+              }));
+
+              Meteor.defer(function() {
+                try {
+                  expect(instance.getItem(testKey)).to.equal(testValue);
+                  done();
+                } catch (e) {
+                  done(e);
+                }
+              });
+            });
+          });
+
+          describe('When key is a string & newValue is null', function() {
+            it('Should call removeItem on the storage', function(done) {
+              let testKey = 'testValue';
+
+              instance.setItem(testKey, '1');
+
+              window.dispatchEvent(new StorageEvent('storage', {
+                key: testKey,
+                newValue: null,
+                storageArea: instance._storage
+              }));
+
+              Meteor.defer(function() {
+                try {
+                  expect(instance.getItem(testKey)).to.equal(null);
+                  done();
+                } catch (e) {
+                  done(e);
+                }
+              });
+            });
+          });
+        });
       });
     });
   });

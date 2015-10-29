@@ -4,6 +4,7 @@
   },
   "globals": {
     "sinon":false,
-    "expect":false
+    "expect":false,
+    "onStorageEvent": false
   }
 }

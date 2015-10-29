@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'mdj:localstorage',
+  name: 'mdj:reactive-storage',
   version: '1.0.0',
   summary: 'Adds a reactive version of local storage & session storage',
   git: 'https://github.com/marcodejongh/meteor-reactive-storage',
@@ -17,11 +17,14 @@ Package.onUse(function(api) {
   ]);
 
   api.addFiles([
-    'client/reactiveStorageWrapper.js'
+    'client/reactiveStorageWrapper.js',
+    'client/storageEventHandler.js'
   ], 'client');
 
   api.export(['reactiveLocalStorage', 'reactiveSessionStorage']);
-  api.export('ReactiveStorageWrapper', {testOnly:true});
+  api.export(['ReactiveStorageWrapper', 'onStorageEvent'], {
+    testOnly: true
+  });
 
 });
 
