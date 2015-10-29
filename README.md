@@ -1,7 +1,7 @@
 meteor-reactive-storage
 ================================
 
-Adds reactivity to localstorage & sessionstorage
+Adds reactive wrappers around localstorage & sessionstorage to your application
 
 #Installation
 
