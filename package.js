@@ -1,7 +1,7 @@
 Package.describe({
   name: 'mdj:reactive-storage',
-  version: '1.0.0',
-  summary: 'Adds a reactive version of local storage & session storage',
+  version: '1.0.1',
+  summary: 'Adds a reactive version of localStorage & sessionStorage',
   git: 'https://github.com/marcodejongh/meteor-reactive-storage',
   documentation: 'README.md'
 });
