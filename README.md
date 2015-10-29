@@ -14,7 +14,7 @@ meteor add mdj:reactive-storage
 The package adds ```reactiveLocalStorage``` and ```reactiveSessionStorage``` to the global scope of your application.
 It wraps around the API of the normal localstorage adding reactivity. Use is the same as the normal ```localStorage``` or ```sessionStorage```
 
-```
+```js
 reactiveLocalStorage.setItem('someValue', '1');
 
 Template.someTemplate.helpers({
